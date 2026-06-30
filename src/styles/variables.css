@@ -1,0 +1,109 @@
+/* Design System & CSS Variables */
+
+:root {
+  /* Fonts */
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  /* Color Palette - Light Mode (Default) */
+  --primary-hue: 220;
+  --primary-sat: 90%;
+  --primary-light: 56%;
+  
+  --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+  --primary-hover: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-light) - 8%));
+  --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.15);
+  
+  --secondary: hsl(262, 80%, 50%);
+  --secondary-hover: hsl(262, 80%, 42%);
+  --accent: hsl(14, 90%, 55%);
+  --accent-hover: hsl(14, 90%, 48%);
+  --accent-glow: hsla(14, 90%, 55%, 0.15);
+  
+  --bg-color: hsl(210, 20%, 98%);
+  --bg-color-rgb: 248, 249, 250;
+  --surface: hsl(0, 0%, 100%);
+  --surface-rgb: 255, 255, 255;
+  --surface-glass: rgba(255, 255, 255, 0.75);
+  --surface-hover: hsl(210, 20%, 96%);
+  
+  --text-color: hsl(220, 15%, 13%);
+  --text-muted: hsl(220, 10%, 45%);
+  --text-light: hsl(220, 10%, 65%);
+  --text-on-primary: hsl(0, 0%, 100%);
+  
+  --border-color: hsl(210, 16%, 90%);
+  --border-glass: rgba(255, 255, 255, 0.4);
+  --border-focus: hsl(var(--primary-hue), var(--primary-sat), 75%);
+  
+  /* Status Colors */
+  --success: hsl(145, 63%, 42%);
+  --success-bg: hsl(145, 63%, 95%);
+  --warning: hsl(43, 93%, 47%);
+  --warning-bg: hsl(43, 93%, 95%);
+  --danger: hsl(354, 70%, 54%);
+  --danger-bg: hsl(354, 70%, 96%);
+  --danger-hover: hsl(354, 70%, 45%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.12);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+  
+  /* Layout & Spacing */
+  --header-height: 80px;
+  --max-width: 1280px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --primary-light: 65%;
+  --primary: hsl(var(--primary-hue), var(--primary-sat), var(--primary-light));
+  --primary-hover: hsl(var(--primary-hue), var(--primary-sat), calc(var(--primary-light) + 8%));
+  --primary-glow: hsla(var(--primary-hue), var(--primary-sat), var(--primary-light), 0.25);
+  
+  --secondary: hsl(266, 85%, 67%);
+  --secondary-hover: hsl(266, 85%, 73%);
+  --accent: hsl(14, 95%, 60%);
+  --accent-hover: hsl(14, 95%, 67%);
+  --accent-glow: hsla(14, 95%, 60%, 0.25);
+  
+  --bg-color: hsl(222, 47%, 9%);
+  --bg-color-rgb: 15, 23, 42;
+  --surface: hsl(223, 47%, 14%);
+  --surface-rgb: 30, 41, 59;
+  --surface-glass: rgba(30, 41, 59, 0.7);
+  --surface-hover: hsl(223, 47%, 18%);
+  
+  --text-color: hsl(210, 40%, 98%);
+  --text-muted: hsl(215, 20%, 65%);
+  --text-light: hsl(215, 15%, 45%);
+  --text-on-primary: hsl(222, 47%, 9%);
+  
+  --border-color: hsl(223, 47%, 20%);
+  --border-glass: rgba(255, 255, 255, 0.06);
+  --border-focus: hsl(var(--primary-hue), var(--primary-sat), 45%);
+  
+  /* Status Colors */
+  --success: hsl(145, 63%, 48%);
+  --success-bg: hsl(145, 63%, 12%);
+  --warning: hsl(43, 93%, 55%);
+  --warning-bg: hsl(43, 93%, 12%);
+  --danger: hsl(354, 75%, 60%);
+  --danger-bg: hsl(354, 75%, 14%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.4);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
