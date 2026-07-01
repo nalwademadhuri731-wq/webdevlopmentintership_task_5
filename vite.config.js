@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/webdevelopmentinternship_task_5/',
+  base: '/webdevlopmentintership_task_5/',
 })
