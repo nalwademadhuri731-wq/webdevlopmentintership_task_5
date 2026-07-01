@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { CartProvider } from './context/CartContext';
 import { WishlistProvider } from './context/WishlistContext';
@@ -21,7 +21,7 @@ function App() {
     <ThemeProvider>
       <CartProvider>
         <WishlistProvider>
-          <BrowserRouter>
+          <HashRouter>
             <Suspense fallback={<Spinner message="Loading ShopSphere..." />}>
               <Routes>
                 {/* Main Shell Layout */}
@@ -42,7 +42,7 @@ function App() {
                 </Route>
               </Routes>
             </Suspense>
-          </BrowserRouter>
+          </HashRouter>
         </WishlistProvider>
       </CartProvider>
     </ThemeProvider>
